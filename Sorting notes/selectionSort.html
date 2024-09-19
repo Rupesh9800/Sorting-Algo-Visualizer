@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <title>Selection Sort Algorithms Website</title>
+  <style>
+    body {
+      background-color: #f8f9fa; /* Light gray background */
+    }
+    .card {
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .card-header {
+      background-color: #007bff; /* Primary blue */
+      color: #fff; /* White text */
+      border-radius: 10px 10px 0 0;
+    }
+    .card-body {
+      background-color: #fff; /* White background */
+    }
+    .card-body p {
+      color: #343a40; /* Dark gray text */
+    }
+    .card-body ul {
+      color: #6c757d; /* Gray text */
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="text-center">Selection Sort</h3>
+      </div>
+      <div class="card-body">
+        <p><strong>Definition:</strong> Selection Sort is a simple comparison-based sorting algorithm that divides the input list into two parts: the sublist of items already sorted, which is built up from left to right at the front (left) of the list, and the sublist of items remaining to be sorted that occupy the rest of the list.</p>
+        
+        <p><strong>How It Works:</strong></p>
+        <ol>
+          <li><strong>Initial Setup:</strong> The algorithm starts with the entire list as unsorted.</li>
+          <li><strong>Finding the Minimum:</strong> From the unsorted sublist, find the smallest element.</li>
+          <li><strong>Swapping:</strong> Swap this smallest element with the first element of the unsorted sublist.</li>
+          <li><strong>Move Boundary:</strong> Move the boundary between the sorted and unsorted sublist one element to the right.</li>
+          <li><strong>Repeat:</strong> Repeat the process for the remaining unsorted elements.</li>
+        </ol>
+
+        <p><strong>Example:</strong></p>
+        <p>Given an unsorted array: [64, 25, 12, 22, 11]</p>
+        <ul>
+          <li><strong>Step 1:</strong> Find the minimum element (11) and swap it with the first element (64).
+            <br>Array after step 1: [11, 25, 12, 22, 64]</li>
+          <li><strong>Step 2:</strong> Find the next minimum element (12) and swap it with the second element (25).
+            <br>Array after step 2: [11, 12, 25, 22, 64]</li>
+          <li><strong>Step 3:</strong> Find the next minimum element (22) and swap it with the third element (25).
+            <br>Array after step 3: [11, 12, 22, 25, 64]</li>
+          <li><strong>Step 4:</strong> The last two elements (25 and 64) are already in order.
+            <br>Final sorted array: [11, 12, 22, 25, 64]</li>
+        </ul>
+
+        <p><strong>Characteristics:</strong></p>
+        <ul>
+          <li><strong>Time Complexity:</strong> O(n²) in all cases (best, average, and worst).</li>
+          <li><strong>Space Complexity:</strong> O(1) (in-place sorting).</li>
+          <li><strong>Stability:</strong> Not stable (does not preserve the relative order of equal elements).</li>
+          <li><strong>Use Case:</strong> Suitable for small datasets or when memory space is limited.</li>
+        </ul>
+
+        <p><strong>Advantages:</strong></p>
+        <ul>
+          <li>Simple to implement and understand.</li>
+          <li>Works well with small lists.</li>
+        </ul>
+
+        <p><strong>Disadvantages:</strong></p>
+        <ul>
+          <li>Inefficient on large lists compared to more advanced algorithms like Quick Sort, Merge Sort, and Heap Sort.</li>
+          <li>The number of comparisons grows quadratically with the number of elements.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

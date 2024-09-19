@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <title>Insertion Sort Algorithms Website</title>
+  <style>
+    body {
+      background-color: #f8f9fa; /* Light gray background */
+    }
+    .card {
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .card-header {
+      background-color: #28a745; /* Success green */
+      color: #fff; /* White text */
+      border-radius: 10px 10px 0 0;
+    }
+    .card-body {
+      background-color: #fff; /* White background */
+    }
+    .card-body p {
+      color: #343a40; /* Dark gray text */
+    }
+    .card-body ul {
+      color: #6c757d; /* Gray text */
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="text-center">Insertion Sort</h3>
+      </div>
+      <div class="card-body">
+        <p><strong>Definition:</strong> Insertion Sort is a simple and intuitive comparison-based sorting algorithm. It builds the sorted array one item at a time, gradually creating a larger left-hand portion which is always sorted.</p>
+        
+        <p><strong>How It Works:</strong></p>
+        <ol>
+          <li><strong>Initial Setup:</strong> The algorithm starts with the first element, considering it as sorted.</li>
+          <li><strong>Iterate and Insert:</strong> For each subsequent element, it compares it with elements in the sorted portion (left side) and inserts it into the correct position by shifting the other elements as necessary.</li>
+          <li><strong>Repeat:</strong> Repeat the process for all elements in the array.</li>
+        </ol>
+
+        <p><strong>Steps Example (Ascending Order):</strong></p>
+        <p>Given an unsorted array: [12, 11, 13, 5, 6]</p>
+        <ul>
+          <li><strong>Step 1:</strong> The first element (12) is already sorted.
+            <br>Array: [12, 11, 13, 5, 6]</li>
+          <li><strong>Step 2:</strong> Take the next element (11) and insert it into the sorted portion.
+            <br>Array: [11, 12, 13, 5, 6]</li>
+          <li><strong>Step 3:</strong> Take the next element (13) and insert it into the sorted portion.
+            <br>Array: [11, 12, 13, 5, 6]</li>
+          <li><strong>Step 4:</strong> Take the next element (5) and insert it into the sorted portion.
+            <br>Array: [5, 11, 12, 13, 6]</li>
+          <li><strong>Step 5:</strong> Take the last element (6) and insert it into the sorted portion.
+            <br>Final sorted array: [5, 6, 11, 12, 13]</li>
+        </ul>
+
+        <p><strong>Characteristics:</strong></p>
+        <ul>
+          <li><strong>Time Complexity:</strong> O(n²) in the average and worst case, O(n) in the best case (when the array is already sorted).</li>
+          <li><strong>Space Complexity:</strong> O(1) (in-place sorting).</li>
+          <li><strong>Stability:</strong> Stable (preserves the relative order of equal elements).</li>
+          <li><strong>Use Case:</strong> Suitable for small datasets or nearly sorted datasets.</li>
+        </ul>
+
+        <p><strong>Advantages:</strong></p>
+        <ul>
+          <li>Simple to implement and understand.</li>
+          <li>Efficient for small or nearly sorted datasets.</li>
+          <li>Adaptive: Efficient for data sets that are already substantially sorted.</li>
+        </ul>
+
+        <p><strong>Disadvantages:</strong></p>
+        <ul>
+          <li>Inefficient for large datasets compared to more advanced algorithms like Quick Sort, Merge Sort, and Heap Sort.</li>
+          <li>The number of comparisons and shifts can be high for large or random datasets.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <title>Quick Sort Algorithms Website</title>
+  <style>
+    body {
+      background-color: #f8f9fa; /* Light gray background */
+    }
+    .card {
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .card-header {
+      background-color: #dc3545; /* Danger red */
+      color: #fff; /* White text */
+      border-radius: 10px 10px 0 0;
+    }
+    .card-body {
+      background-color: #fff; /* White background */
+    }
+    .card-body p {
+      color: #343a40; /* Dark gray text */
+    }
+    .card-body ul {
+      color: #6c757d; /* Gray text */
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="text-center">Quick Sort</h3>
+      </div>
+      <div class="card-body">
+        <p><strong>Definition:</strong> Quick Sort is an efficient and widely used comparison-based sorting algorithm. It employs a divide-and-conquer strategy to sort elements by partitioning the array into smaller sub-arrays.</p>
+        
+        <p><strong>How It Works:</strong></p>
+        <ol>
+          <li><strong>Choose a Pivot:</strong> Select an element from the array to serve as the pivot.</li>
+          <li><strong>Partitioning:</strong> Rearrange the elements so that elements less than the pivot are on the left, and elements greater than the pivot are on the right.</li>
+          <li><strong>Recursively Sort:</strong> Recursively apply the same process to the left and right sub-arrays until the entire array is sorted.</li>
+        </ol>
+
+        <p><strong>Steps Example (Ascending Order):</strong></p>
+        <p>Given an unsorted array: [10, 7, 8, 9, 1, 5]</p>
+        <ul>
+          <li><strong>Step 1:</strong> Choose a pivot (e.g., 5).
+            <br>Partition the array around the pivot.
+            <br>Result: [1, 5, 7, 8, 9, 10]</li>
+          <li><strong>Step 2:</strong> Recursively apply Quick Sort to the left sub-array [1] (already sorted).</li>
+          <li><strong>Step 3:</strong> Recursively apply Quick Sort to the right sub-array [7, 8, 9, 10].
+            <br>Choose a pivot (e.g., 9).
+            <br>Partition the array around the pivot.
+            <br>Result: [7, 8, 9, 10]</li>
+        </ul>
+
+        <p><strong>Characteristics:</strong></p>
+        <ul>
+          <li><strong>Time Complexity:</strong> O(n²) in the worst case (when poorly chosen pivots lead to unbalanced partitions), O(n log n) on average.</li>
+          <li><strong>Space Complexity:</strong> O(log n) due to recursive calls (in-place sorting).</li>
+          <li><strong>Stability:</strong> Not stable (does not preserve the relative order of equal elements).</li>
+          <li><strong>Use Case:</strong> Suitable for large datasets and commonly used due to its average-case efficiency.</li>
+        </ul>
+
+        <p><strong>Advantages:</strong></p>
+        <ul>
+          <li>Generally faster than other O(n log n) algorithms like Merge Sort and Heap Sort for large datasets.</li>
+          <li>In-place sorting requires less additional memory compared to Merge Sort.</li>
+        </ul>
+
+        <p><strong>Disadvantages:</strong></p>
+        <ul>
+          <li>Worst-case time complexity of O(n²), although this can be mitigated with good pivot selection strategies (e.g., random pivot, median-of-three).</li>
+          <li>Not stable, meaning equal elements might not retain their relative order.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

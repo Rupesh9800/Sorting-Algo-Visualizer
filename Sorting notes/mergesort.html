@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <title>Merge Sort Algorithms Website</title>
+  <style>
+    body {
+      background-color: #f8f9fa; /* Light gray background */
+    }
+    .card {
+      margin-top: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .card-header {
+      background-color: #6c757d; /* Dark gray */
+      color: #fff; /* White text */
+      border-radius: 10px 10px 0 0;
+    }
+    .card-body {
+      background-color: #fff; /* White background */
+    }
+    .card-body p {
+      color: #343a40; /* Dark gray text */
+    }
+    .card-body ul {
+      color: #6c757d; /* Gray text */
+    }
+  </style>
+</head>
+<body>
+  <div class="container mt-5">
+    <div class="card">
+      <div class="card-header">
+        <h3 class="text-center">Merge Sort</h3>
+      </div>
+      <div class="card-body">
+        <p><strong>Definition:</strong> Merge Sort is a stable, comparison-based sorting algorithm that follows the divide-and-conquer approach. It divides the array into smaller sub-arrays, sorts them recursively, and then merges them to produce a sorted array.</p>
+        
+        <p><strong>How It Works:</strong></p>
+        <ol>
+          <li><strong>Divide:</strong> Divide the unsorted array into two halves recursively until each sub-array contains only one element.</li>
+          <li><strong>Conquer:</strong> Merge the smaller sorted arrays (left and right halves) to create larger sorted arrays until the entire array is merged and sorted.</li>
+        </ol>
+
+        <p><strong>Steps Example (Ascending Order):</strong></p>
+        <p>Given an unsorted array: [38, 27, 43, 3, 9, 82, 10]</p>
+        <ul>
+          <li><strong>Step 1:</strong> Divide the array into smaller sub-arrays until each sub-array contains one element.
+            <br>Recursive splitting: [38, 27, 43, 3, 9, 82, 10] → [38, 27, 43, 3], [9, 82, 10]</li>
+          <li><strong>Step 2:</strong> Merge the smaller sorted arrays back together in sorted order.
+            <br>First merge: [27, 38, 43, 3] and [9, 10, 82] → [3, 9, 10, 27, 38, 43, 82]</li>
+        </ul>
+
+        <p><strong>Characteristics:</strong></p>
+        <ul>
+          <li><strong>Time Complexity:</strong> O(n log n) in all cases (best, average, and worst).</li>
+          <li><strong>Space Complexity:</strong> O(n) due to the auxiliary space required for merging.</li>
+          <li><strong>Stability:</strong> Stable (preserves the relative order of equal elements).</li>
+          <li><strong>Use Case:</strong> Suitable for sorting linked lists and external sorting where random access is costly.</li>
+        </ul>
+
+        <p><strong>Advantages:</strong></p>
+        <ul>
+          <li>Efficient and consistent performance across different input types.</li>
+          <li>Stable sorting algorithm suitable for scenarios where maintaining order is crucial.</li>
+        </ul>
+
+        <p><strong>Disadvantages:</strong></p>
+        <ul>
+          <li>Requires additional memory space for merging sub-arrays, which can be a drawback for large datasets.</li>
+          <li>Not as efficient in practice as Quick Sort for arrays with a small size or when a high level of memory is available.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
